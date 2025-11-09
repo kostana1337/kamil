@@ -10,62 +10,120 @@
             text-align: center;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 20px;
+            padding: 10px;
         }
+
         h1 {
             color: #333;
+            font-size: 1.6em;
+            margin-bottom: 5px;
         }
+
         h2 {
             color: #555;
+            font-size: 1.2em;
+            margin-top: 0;
         }
+
         .calendar {
-            margin: 40px auto;
+            width: 100%;
             border-collapse: collapse;
-            width: 90%;
-            max-width: 900px;
             background-color: white;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             border-radius: 10px;
             overflow: hidden;
+            margin-top: 20px;
         }
+
         .calendar th {
             background-color: #e63946;
             color: white;
-            padding: 15px;
-            font-size: 1.1em;
+            padding: 10px;
+            font-size: 0.9em;
         }
+
         .calendar td {
-            height: 90px;
+            height: 70px;
             vertical-align: top;
-            padding: 8px;
+            padding: 6px;
             border: 1px solid #ddd;
         }
+
         .day-number {
             font-weight: bold;
-            font-size: 1.3em;
+            font-size: 1.1em;
             color: #333;
         }
+
         .lies-count {
             font-weight: bold;
-            margin-top: 5px;
+            margin-top: 4px;
             transition: color 0.3s ease;
+            font-size: 0.9em;
         }
+
         .empty {
             background-color: #f9f9f9;
         }
+
         .unknown {
             color: #f4a261 !important; /* pomarańczowy */
         }
+
         .total {
-            margin-top: 30px;
-            font-size: 1.5em;
+            margin-top: 25px;
+            font-size: 1.3em;
             font-weight: bold;
             color: #e63946;
         }
+
         footer {
-            margin-top: 40px;
+            margin-top: 30px;
             color: #777;
-            font-size: 0.9em;
+            font-size: 0.85em;
+            line-height: 1.4em;
+        }
+
+        /* === WIDOK MOBILNY === */
+        @media (max-width: 600px) {
+            body {
+                padding: 5px;
+            }
+
+            h1 {
+                font-size: 1.4em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+
+            .calendar {
+                font-size: 0.8em;
+                box-shadow: none;
+                border-radius: 5px;
+            }
+
+            .calendar th, .calendar td {
+                padding: 5px;
+            }
+
+            .day-number {
+                font-size: 1em;
+            }
+
+            .lies-count {
+                font-size: 0.8em;
+            }
+
+            .total {
+                font-size: 1.1em;
+            }
+
+            footer {
+                font-size: 0.75em;
+                padding: 0 5px;
+            }
         }
     </style>
 </head>
