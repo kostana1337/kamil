@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licznik Kłamstw Kamila Reszki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        .calendar {
+            margin: 40px auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 900px;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .calendar th {
+            background-color: #e63946;
+            color: white;
+            padding: 15px;
+            font-size: 1.1em;
+        }
+        .calendar td {
+            height: 90px;
+            vertical-align: top;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        .day-number {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #333;
+        }
+        .lies-count {
+            color: #e63946;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .empty {
+            background-color: #f9f9f9;
+        }
+        .total {
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #e63946;
+        }
+        footer {
+            margin-top: 40px;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Licznik Kłamstw Kamila Reszki</h1>
+    <h2>Listopad 2025</h2>
+
+    <table class="calendar">
+        <thead>
+            <tr>
+                <th>Pon</th><th>Wt</th><th>Śr</th><th>Czw</th><th>Pt</th><th>Sob</th><th>Ndz</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="empty"></td>
+                <td class="empty"></td>
+                <td class="empty"></td>
+                <td class="empty"></td>
+                <td class="empty"></td>
+                <td><div class="day-number">1</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">2</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+            </tr>
+            <tr>
+                <td><div class="day-number">3</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">4</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">5</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">6</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">7</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">8</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">9</div><div class="lies-count" data-lies="1">Kłamstw: 1</div></td>
+            </tr>
+            <tr>
+                <td><div class="day-number">10</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">11</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">12</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">13</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">14</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">15</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">16</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+            </tr>
+            <tr>
+                <td><div class="day-number">17</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">18</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">19</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">20</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">21</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">22</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">23</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+            </tr>
+            <tr>
+                <td><div class="day-number">24</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">25</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">26</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">27</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">28</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">29</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">30</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="total">Całkowita liczba kłamstw w listopadzie: <span id="totalLies">0</span></div>
+
+<footer>
+        <div class="disclaimer">
+            <strong>Uwaga:</strong> Licznik kłamstw Kamila Reszki rozpoczął działanie dopiero 9 listopada 2025 r. 
+            Wszystkie kłamstwa z okresu 1–8 listopada nie zostały uwzględnione. 
+            <strong>Rzeczywista liczba kłamstw w listopadzie jest więc znacznie wyższa.</strong>
+        </div>
+    </footer>
+
+    <script>
+        // Automatyczne liczenie sumy kłamstw
+        document.addEventListener("DOMContentLoaded", function() {
+            const liesElements = document.querySelectorAll('.lies-count');
+            let total = 0;
+
+            liesElements.forEach(el => {
+                const lies = parseInt(el.getAttribute('data-lies')) || 0;
+                total += lies;
+                // Aktualizacja tekstu w komórce
+                el.textContent = `Kłamstw: ${lies}`;
+            });
+
+            document.getElementById('totalLies').textContent = total;
+        });
+    </script>
+</body>
+</html>
