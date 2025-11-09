@@ -46,12 +46,15 @@
             color: #333;
         }
         .lies-count {
-            color: #e63946;
             font-weight: bold;
             margin-top: 5px;
+            transition: color 0.3s ease;
         }
         .empty {
             background-color: #f9f9f9;
+        }
+        .unknown {
+            color: #f4a261 !important; /* pomarańczowy */
         }
         .total {
             margin-top: 30px;
@@ -83,16 +86,16 @@
                 <td class="empty"></td>
                 <td class="empty"></td>
                 <td class="empty"></td>
-                <td><div class="day-number">1</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
-                <td><div class="day-number">2</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">1</div><div class="lies-count unknown" data-lies="?">Kłamstw: ?</div></td>
+                <td><div class="day-number">2</div><div class="lies-count unknown" data-lies="?">Kłamstw: ?</div></td>
             </tr>
             <tr>
-                <td><div class="day-number">3</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
-                <td><div class="day-number">4</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
-                <td><div class="day-number">5</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
-                <td><div class="day-number">6</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
-                <td><div class="day-number">7</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
-                <td><div class="day-number">8</div><div class="lies-count" data-lies="0">Kłamstw: 0</div></td>
+                <td><div class="day-number">3</div><div class="lies-count unknown" data-lies="?">Kłamstw: ?</div></td>
+                <td><div class="day-number">4</div><div class="lies-count unknown" data-lies="?">Kłamstw: ?</div></td>
+                <td><div class="day-number">5</div><div class="lies-count unknown" data-lies="?">Kłamstw: ?</div></td>
+                <td><div class="day-number">6</div><div class="lies-count unknown" data-lies="?">Kłamstw: ?</div></td>
+                <td><div class="day-number">7</div><div class="lies-count unknown" data-lies="?">Kłamstw: ?</div></td>
+                <td><div class="day-number">8</div><div class="lies-count unknown" data-lies="?">Kłamstw: ?</div></td>
                 <td><div class="day-number">9</div><div class="lies-count" data-lies="1">Kłamstw: 1</div></td>
             </tr>
             <tr>
@@ -127,7 +130,7 @@
 
     <div class="total">Całkowita liczba kłamstw w listopadzie: <span id="totalLies">0</span></div>
 
-<footer>
+    <footer>
         <div class="disclaimer">
             <strong>Uwaga:</strong> Licznik kłamstw Kamila Reszki rozpoczął działanie dopiero 9 listopada 2025 r. 
             Wszystkie kłamstwa z okresu 1–8 listopada nie zostały uwzględnione. 
@@ -136,16 +139,27 @@
     </footer>
 
     <script>
-        // Automatyczne liczenie sumy kłamstw
         document.addEventListener("DOMContentLoaded", function() {
             const liesElements = document.querySelectorAll('.lies-count');
             let total = 0;
 
             liesElements.forEach(el => {
-                const lies = parseInt(el.getAttribute('data-lies')) || 0;
-                total += lies;
-                // Aktualizacja tekstu w komórce
-                el.textContent = `Kłamstw: ${lies}`;
+                const lies = el.getAttribute('data-lies');
+                
+                if (lies === "?") {
+                    el.textContent = "Kłamstw: ?";
+                    return; // pomiń sumowanie
+                }
+
+                const num = parseInt(lies) || 0;
+                total += num;
+                el.textContent = `Kłamstw: ${num}`;
+
+                if (num > 0) {
+                    el.style.color = "#e63946"; // czerwony
+                } else {
+                    el.style.color = "#2a9d8f"; // zielony
+                }
             });
 
             document.getElementById('totalLies').textContent = total;
